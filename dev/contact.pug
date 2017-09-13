@@ -1,0 +1,46 @@
+extends _base
+
+block vars
+  -
+    var pageId = "contact",
+        pageClass = "_inner"
+
+block content
+  .container
+    +b.contact
+      +e.data
+        h2 Контактная информация
+        dl
+          div
+            dt Офис:
+            dd 141077, Московская область, Королев, ул. Фрунзе, д.1а
+          div
+            dt Телефон:
+            dd
+              a(href="tel:88002003151") 8 (800) 200-31-51
+              br
+              a(href="tel:84951171416") 8 (495) 117-14-16
+          div
+            dt Почта:
+            dd
+              a(href="mailto:ask@mediq.su") ask@mediq.su
+
+      +e.map
+        #map
+
+
+block append scripts
+  script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU", type="text/javascript")
+  script(type="text/javascript").
+    ymaps.ready(init);
+    var myMap;
+
+    function init(){     
+        myMap = new ymaps.Map("map", {
+            center: [55.75399400, 37.62209300],
+            zoom: 10,
+            controls: ['smallMapDefaultSet']
+        });
+        myMap.geoObjects.add(new ymaps.Placemark([55.75399400, 37.62209300], {}));
+
+    }

@@ -1,0 +1,32 @@
+$xxs: 320
+$xs: 480
+$sm: 768
+$md: 1030
+$lg: 1300
+$xlg: 1500
+
+$cols: 12
+$gutter: 30px
+// $col: calc(100% / $cols)
+// $col: 5.2%
+
+%container
+  margin: 0 (-($gutter/2))
+  box-sizing: border-box
+  display: flex
+  +r($lg)
+    width: 1000px
+  +r($md)
+    width: 740px
+  +r($sm)
+    width: 100%
+    margin: 0 auto
+
+
+=container($align:space-between, $wrap:wrap)
+  @extend %container
+  justify-content: $align
+  flex-wrap: $wrap
+
+=col($num)
+  width: calc( (((100% - (#{$gutter} * (#{$cols} - 1))) / #{$cols}) * #{$num}) + ( #{$gutter} * (#{$num} - 1)) )

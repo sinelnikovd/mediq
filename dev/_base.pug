@@ -1,0 +1,63 @@
+include _assets/bemto/bemto
+
+include head/head
+include sort/sort
+
+doctype html
+html(lang="ru")
+	
+	block vars
+
+	block head
+		head
+			+head({
+				"title": "MedIQ Israil",
+				"author": "Sinelnikov Dmitriy",
+				"description": "MedIQ Israil"
+			})
+			
+		+b.BODY.page(id= pageId, class= pageClass)
+			+e.wrap
+				block header
+					+b.HEADER.header
+						.container
+							+e.inner
+								+b.A.logo(href="/")
+									img(src="img/logo.png", alt="MedIQ Israil")
+								+b.NAV.nav
+									+e.BUTTON.close(type="button")
+									a.active(href="clinic.html") Клиники
+									a(href="doctor.html") Врачи
+									a(href="support.html") Поддержка пациентов
+									a(href="about.html") О нас
+									a(href="contact.html") Контакты
+								+b.call
+									+e.A.phone(href="tel:88003005050") 8 (800) 300-50-50
+									br
+									+b.BUTTON.btn._primary(type="button") Подобрать лечение
+								+b.hamburger
+									span
+				+e.content
+					block content
+						div content
+
+				block footer
+					+b.FOOTER.footer
+						.container
+							nav
+								a(href="clinic.html") Клиники Израиля
+								a(href="doctor.html") Врачи Израиля
+								a(href="about.html") Информация о MedIQ
+								a(href="contact.html") Контактные данные
+								a(href="#") Политика конфиденциальности
+							+b.copy &copy; 2017. MedIQ — сервис поддержки пациентов, проходящих лечение в Израиле
+
+				
+			block vendors
+				// build:js js/vendor.js
+				script( src="/_assets/jquery/dist/jquery.min.js")
+				// endbuild
+			block scripts
+				// build:js js/main.js
+				script( src="js/main.js")
+				// endbuild

@@ -1,0 +1,72 @@
+.contact
+  +container
+  align-items: stretch
+  padding: 81px 0 35px
+  +r($md)
+    padding: 79px 0 35px
+  +r($xs)
+    padding: 65px 0 20px
+
+  &__data
+    +col(4)
+    padding-top: 30px
+    padding-right: 40px
+    +box
+    +r($md)
+      padding-right: 0
+      +col(6)
+    +r($sm)
+      +col(12)
+    +r($xs)
+      text-align: center
+    h2
+      +ms700
+      color: #9155a7
+      font-size: 24px
+      +r($xs)
+        font-size: 20px
+
+    dl
+      width: 100%
+      margin-top: 50px
+      display: table
+      +r($sm)
+        margin-top: 30px
+      +r($xs)
+        margin-top: 10px
+        display: block
+      div
+        display: table-row
+        +r($xs)
+          display: block
+
+    dt
+      display: table-cell
+      +ms700
+      color: #9155a7
+      font-size: 18px
+      padding: 10px 15px 10px 0
+      +r($xs)
+        display: block
+        padding: 10px 0 0
+    dd
+      display: table-cell
+      padding: 10px 0 10px 15px
+      +r($xs)
+        display: block
+        padding: 0
+      a
+        color: #000
+
+  &__map
+    +col(8)
+    +r($md)
+      +col(6)
+    +r($sm)
+      +col(12)
+    +r($xs)
+      margin-top: 15px
+  #map
+    height: 600px
+    +r($md)
+      height: 400px

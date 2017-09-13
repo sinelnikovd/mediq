@@ -1,0 +1,119 @@
+.select
+  display: inline-block
+  position: relative
+  +r($xs)
+    height: 25px
+    float: right
+    margin-top: -10px
+    position: static
+  select
+    display: none
+
+
+
+  &__dropdown
+    display: inline-block
+    vertical-align: middle
+    display: none
+    position: relative
+    width: 33px
+    height: 25px
+    position: relative
+    top: 8px
+    +r($xs)
+      display: block
+    &:before
+      content: ''
+      width: 33px
+      position: absolute
+      top: 0
+      height: 5px
+      background-color: #3d849b
+    &:after
+      content: ''
+      width: 15px
+      position: absolute
+      bottom: 0
+      height: 5px
+      background-color: #3d849b
+    span
+      width: 25px
+      position: absolute
+      top: 50%
+      margin-top: -2.5px
+      height: 5px
+      background-color: #3d849b
+
+
+
+  &__current
+    display: inline-block
+    width: 180px
+    height: 35px
+    line-height: 35px
+    font-size: 14px
+    border: 1px solid #aaa
+    border-radius: 5px
+    cursor: pointer
+    padding:
+      right: 30px
+      left: 15px
+    +box
+    position: relative
+    +r($xs)
+      display: none
+    .open &
+      border-radius: 5px 5px 0 0
+      box-shadow: 0 0 2px #97c1d9
+      border-color: #97c1d9
+      &:after
+        border-color: #97c1d9
+    &:hover
+      box-shadow: 0 0 2px #97c1d9
+      border-color: #97c1d9
+      &:after
+        border-color: #97c1d9
+    &:after
+      content: ''
+      position: absolute
+      top: 50%
+      margin-top: -5px
+      right: 12px
+      width: 7px
+      height: 7px
+      border-bottom: 1px solid #aaa
+      border-left: 1px solid #aaa
+      transform: rotate(-45deg)
+
+  &__list
+    display: none
+    position: absolute
+    width: 100%
+    background-color: #fff
+    border:
+      bottom: 1px solid #97c1d9
+      left: 1px solid #97c1d9
+      right: 1px solid #97c1d9
+    z-index: 20
+    font-size: 14px
+    border-radius: 0 0 5px 5px
+    +box
+    +r($xs)
+      right: 0
+      margin-top: 1px
+      top: 100%
+      border: 0
+      border-radius: 0
+      box-shadow: 0 2px 3px rgba(#000, .2)
+    .open &
+      display: block
+    li
+      padding: 5px 10px
+      cursor: pointer
+      +box
+      +r($xs)
+        border-bottom: 1px solid #97c1d9
+        padding: 10px
+      &:hover
+        background-color: rgba(#97c1d9, .2)
+

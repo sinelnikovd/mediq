@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>MedIQ Israil</title>
+    <meta charset="utf-8"/>
+    <meta content="Sinelnikov Dmitriy" name="author"/>
+    <meta content="MedIQ Israil" name="description"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon"/>
+    <!-- build:css css/vendor.css-->
+    <!-- endbuild-->
+    <!-- build:css css/main.css-->
+    <link rel="stylesheet" href="css/main.css"/>
+    <!-- endbuild-->
+  </head>
+  <body class="page page_inner" id="contact">
+    <div class="page__wrap">
+      <header class="header">
+        <div class="container">
+          <div class="header__inner"><a class="logo" href="/"><img src="img/logo.png" alt="MedIQ Israil"></a>
+            <nav class="nav">
+              <button class="nav__close" type="button">
+              </button><a class="active" href="clinic.html">Клиники</a><a href="doctor.html">Врачи</a><a href="support.html">Поддержка пациентов</a><a href="about.html">О нас</a><a href="contact.html">Контакты</a>
+            </nav>
+            <div class="call"><a class="call__phone" href="tel:88003005050">8 (800) 300-50-50</a><br>
+              <button class="btn btn_primary" type="button">Подобрать лечение
+              </button>
+            </div>
+            <div class="hamburger"><span></span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="page__content">
+        <div class="container">
+          <div class="contact">
+            <div class="contact__data">
+              <h2>Контактная информация</h2>
+              <dl>
+                <div>
+                  <dt>Офис:</dt>
+                  <dd>141077, Московская область, Королев, ул. Фрунзе, д.1а</dd>
+                </div>
+                <div>
+                  <dt>Телефон:</dt>
+                  <dd><a href="tel:88002003151">8 (800) 200-31-51</a><br><a href="tel:84951171416">8 (495) 117-14-16</a></dd>
+                </div>
+                <div>
+                  <dt>Почта:</dt>
+                  <dd><a href="mailto:ask@mediq.su">ask@mediq.su</a></dd>
+                </div>
+              </dl>
+            </div>
+            <div class="contact__map">
+              <div id="map"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <nav><a href="clinic.html">Клиники Израиля</a><a href="doctor.html">Врачи Израиля</a><a href="about.html">Информация о MedIQ</a><a href="contact.html">Контактные данные</a><a href="#">Политика конфиденциальности</a></nav>
+          <div class="copy">&copy; 2017. MedIQ — сервис поддержки пациентов, проходящих лечение в Израиле
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- build:js js/vendor.js-->
+    <script src="/_assets/jquery/dist/jquery.min.js"></script>
+    <!-- endbuild-->
+    <!-- build:js js/main.js-->
+    <script src="js/main.js"></script>
+    <!-- endbuild-->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript">
+      ymaps.ready(init);
+      var myMap;
+      
+      function init(){     
+          myMap = new ymaps.Map("map", {
+              center: [55.75399400, 37.62209300],
+              zoom: 10,
+              controls: ['smallMapDefaultSet']
+          });
+          myMap.geoObjects.add(new ymaps.Placemark([55.75399400, 37.62209300], {}));
+      
+      }
+    </script>
+  </body>
+</html>

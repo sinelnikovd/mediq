@@ -1,0 +1,78 @@
+.icon {
+
+    &:before {
+      content: '';
+			display: inline-block;
+			vertical-align: middle;
+      background-image: url("../../img/svg/sprite.svg");
+      background-repeat: no-repeat;
+      background-size: 120px 305px;
+
+      .no-svg & {
+        background-image: url("../../img/svg/sprite.png");
+      }
+    }
+}
+
+
+
+
+.icon_calendar {
+	width: 78px;
+	height: 72px;
+  &:before {
+      background-position: 0px 0px;
+      width: 78px;
+      height: 72px;
+    }
+  }
+
+  @mixin icon-calendar(){
+    @extend .icon_calendar;
+  }
+
+
+.icon_clinic {
+	width: 120px;
+	height: 75px;
+  &:before {
+      background-position: 0px -72px;
+      width: 120px;
+      height: 75px;
+    }
+  }
+
+  @mixin icon-clinic(){
+    @extend .icon_clinic;
+  }
+
+
+.icon_family {
+	width: 74px;
+	height: 74px;
+  &:before {
+      background-position: 0px -147px;
+      width: 74px;
+      height: 74px;
+    }
+  }
+
+  @mixin icon-family(){
+    @extend .icon_family;
+  }
+
+
+.icon_lang {
+	width: 98.26px;
+	height: 83.86px;
+  &:before {
+      background-position: 0px -221px;
+      width: 98.26px;
+      height: 83.86px;
+    }
+  }
+
+  @mixin icon-lang(){
+    @extend .icon_lang;
+  }
+

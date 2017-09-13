@@ -1,0 +1,158 @@
+.header
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 25
+  background-color: #fff
+  +box
+  border-bottom: 2px solid #9155a7
+  padding:
+    top: 10px
+    bottom: 7px
+
+  &__inner
+    +container
+    align-items: center
+
+  .nav
+    +r($sm)
+      display: none
+      position: fixed
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      z-index: 35
+      background-color: #3d849b
+      padding: 30vh 15px 0
+      .open-menu &
+        display: block
+
+    &__close
+      display: none
+      background-color: transparent
+      border: 0 none
+      position: absolute
+      top: 15px
+      right: 15px
+      width: 30px
+      height: 30px
+      outline: none
+      &:after
+        content: ''
+        position: absolute
+        left: 0
+        right: 0
+        background-color: #fff
+        height: 5px
+        transform: rotate(45deg)
+      &:before
+        content: ''
+        position: absolute
+        left: 0
+        right: 0
+        background-color: #fff
+        height: 5px
+        transform: rotate(-45deg)
+      +r($sm)
+        .open-menu &
+          display: block
+    a
+      color: #71acb6
+      font-size: 17px
+      display: inline-block
+      padding: 10px 15px
+      line-height: 1
+      +r($md)
+        font-size: 14px
+        padding: 10px 5px
+      +r($sm)
+        display: block
+        text-align: center
+        color: #fff
+        &:not(:last-child)
+          border-bottom: 1px solid rgba(#fff, .3)
+      &:hover
+        text-decoration: underline
+        color: #6aaab4
+        +r($sm)
+          color: #fff
+      &.active
+        +ms900
+        text-decoration: none
+        color: #6aaab4
+        +r($sm)
+          color: #fff
+
+  .logo
+    +r($sm)
+      width: 45%
+    +r($xs)
+      max-width: 110px
+
+.call
+  text-align: center
+  +r($sm)
+    width: 35%
+    margin-right: 20px
+  +r($xs)
+    width: auto
+    margin-right: 0
+  &__phone
+    +ms500
+    font-size: 19px
+    color: #ff024f
+    +r($md)
+      font-size: 17px
+    +r($xs)
+      font-size: 14px
+  .btn
+    height: 38px
+    border-radius: 20px
+    font-size: 15px
+    padding:
+      left: 35px
+      right: 35px
+    +r($md)
+      height: 35px
+      font-size: 13px
+      padding:
+        left: 20px
+        right: 20px
+    +r($sm)
+      display: none
+
+.hamburger
+  display: none
+  position: relative
+  width: 30px
+  height: 25px
+
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    background-color: #8b4ca3
+    height: 5px
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: #8b4ca3
+    height: 5px
+  span
+    position: absolute
+    left: 0
+    right: 0
+    top: 50%
+    margin-top: -2.5px
+    background-color: #8b4ca3
+    height: 5px
+
+  +r($sm)
+    display: block

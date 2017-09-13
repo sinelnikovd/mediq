@@ -1,0 +1,34 @@
+.footer
+  background-color: #fff
+  border-top: 1px solid #3d849b
+  text-align: center
+  padding:
+    top: 20px
+    bottom: 20px
+  nav
+    display: flex
+    justify-content: space-around
+    +r($md)
+      flex-wrap: wrap
+      justify-content: center
+    a
+      +ms500
+      font-size: 16px
+      color: #6aaab4
+      display: inline-block
+      padding: 10px
+      +box
+      +r($md)
+        padding: 5px
+        font-size: 14px
+      +r($xs)
+        width: 100%
+        padding: 2px
+      &:hover
+        text-decoration: underline
+
+  .copy
+    margin-top: 15px
+    +r($sm)
+      margin-top: 10px
+      font-size: 14px

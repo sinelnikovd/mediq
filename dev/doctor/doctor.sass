@@ -1,0 +1,84 @@
+.doctor
+  +container
+  align-items: stretch
+
+  .doctor-item
+    +col(6)
+    +r($sm)
+      +col(12)
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6)
+        display: none
+
+  &__btn
+    margin: 10px auto 0
+    display: block
+    max-width: 340px
+    width: 100%
+    padding: 15px 30px
+    border-radius: 30px
+    +box
+
+.doctor-item
+  margin: 50px 0
+  +clr
+  +r($md)
+    margin: 30px 0
+    text-align: center
+  +r($sm)
+    text-align: left
+  +r($xs)
+    text-align: center
+  &__photo
+    max-width: 170px
+    float: left
+    border-radius: 100%
+    +r($md)
+      float: none
+    +r($sm)
+      float: left
+    +r($xs)
+      float: none
+
+  &__data
+    padding:
+      left: 195px
+      right: 15px
+    font-size: 15px
+    line-height: (20/15)
+    +r($md)
+      padding-left: 15px
+    +r($sm)
+      padding-left: 195px
+    +r($xs)
+      padding-left: 15px
+  &__name
+    +ms900
+    font-size: 24px
+    color: #3a7079
+    line-height: 1.1
+
+  &__type
+    line-height: 1.1
+
+  p
+    margin: 15px 0
+
+  &__job
+    color: #949494
+    a
+      +ms700
+      color: #3a7079
+      text-decoration: underline
+      &:hover
+        text-decoration: none
+
+  .btn
+    margin-top: 15px
+    height: 40px
+    padding:
+      left: 40px
+      right: 40px
+    +box

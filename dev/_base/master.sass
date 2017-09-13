@@ -1,0 +1,167 @@
+body
+  +ms100
+  min-width: 320px
+  font-size: 16px
+  line-height: (21/16)
+
+.page
+  +r($sm)
+    &.open-menu
+      width: 100vw
+      height: 100vh
+  &__wrap
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+  &__content
+    flex: 1 0 auto
+
+  &_inner
+    .page__content
+      padding-bottom: 30px
+  &#clinic
+    background-color: #e5e5e5
+    +r($xs)
+      .container_clinic
+        padding: 0
+      .btn-wrap
+        padding: 0 15px
+        +box
+  &#about
+    .page__content
+      padding-bottom: 0
+
+.container
+  max-width: 1300px
+  margin: 0 auto
+  padding: 0 15px
+  +box
+  +r($lg)
+    width: 1000px
+  +r($md)
+    width: 740px
+  +r($sm)
+    width: 100%
+img
+  max-width: 100%
+
+.hidden-xs
+  +r($xs)
+    display: none
+
+.btn
+  user-select: none
+  display: inline-block
+  cursor: pointer
+  vertical-align: middle
+  text-align: center
+  white-space: normal
+  word-wrap: normal
+  background-color: transparent
+  border: 0 none
+  padding: 0
+  margin: 0
+  +box
+
+  &_primary
+    +ms700
+    background-color: #1dbb77
+    border: 2px solid #1dbb77
+    color: #fff
+    transition: background-color .2s ease-in-out, color .2s ease-in-out
+    &:hover
+      background-color: transparent
+      color: #1dbb77
+
+  &_info
+    background-color: #6aaab4
+    color: #fff
+    border: 1px solid #6aaab4
+    border-radius: 5px
+    transition: background-color .2s ease-in-out, color .2s ease-in-out
+    &:hover
+      background-color: transparent
+      color: #6aaab4
+
+  &_default
+    +ms700
+    border: 2px solid #6aaab4
+    color: #6aaab4
+    transition: background-color .2s ease-in-out, color .2s ease-in-out
+    &:hover
+      background-color: #6aaab4
+      color: #fff
+
+.logo
+  display: block
+
+
+.main-section
+  padding: 20px 0 50px
+  h2
+    text-align: center
+    font-size: 36px
+    margin-bottom: 15px
+    +r($lg)
+      font-size: 28px
+    +r($sm)
+      font-size: 26px
+      line-height: 32/26
+  &_clinic
+    background-color: #e5e5e5
+    h2
+      +ms300
+      +r($xs)
+        padding: 0 15px
+        +box
+    .container
+      +r($xs)
+        padding: 0
+    .btn-wrap
+      +r($xs)
+        padding: 0 15px
+        +box
+
+  &_doctor
+    h2
+      +ms700
+
+
+.content
+  font-size: 14px
+  line-height: 20/14
+  column-count: 2
+  column-gap: 30px
+  padding: 20px 0
+  +r($sm)
+    columns: auto
+
+  p
+    +r($sm)
+      margin: 10px 0
+
+  h1
+    +ms900
+    font-size: 20px
+    margin: 15px 0
+  h2
+    +ms900
+    font-size: 18px
+    margin: 10px 0
+  h3
+    +ms900
+    font-size: 16px
+    margin: 10px 0
+
+  h4,h5,h6
+    +ms900
+    margin: 10px 0
+
+  ul
+    list-style-type: disc
+    padding-left: 10px
+    margin-left: 10px
+  ol
+    list-style-type: decimal
+    padding-left: 10px
+    margin-left: 10px

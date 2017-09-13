@@ -1,0 +1,20 @@
+mixin sort(txt)
+  +b.sort
+    .container
+        +e.SPAN.label!= txt
+        +b.select
+          +e.SPAN.current Все специализации
+          +e.SPAN.dropdown
+            span
+          +e.UL.list
+            +e.LI(data-value="0") Все специализации
+            +e.LI(data-value="1") Гастроэнтерология
+            +e.LI(data-value="2") Хирургия
+            +e.LI(data-value="3") Ортопедия
+            +e.LI(data-value="4") Онкология
+          select(name="sort")
+            option(value="0" selected) Все специализации
+            option(value="1") Гастроэнтерология
+            option(value="2") Хирургия
+            option(value="3") Ортопедия
+            option(value="4") Онкология

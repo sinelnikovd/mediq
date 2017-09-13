@@ -1,0 +1,43 @@
+.vantage
+  background-color: #9bebcb
+  background-image: linear-gradient(to bottom, #9bebcb, #a8d7f2)
+  padding: 20px 0
+
+  &__list
+    +container
+
+  &__item
+    +col(6)
+    text-align: center
+    margin: 40px 0
+    +box
+    +r($sm)
+      +col(12)
+      margin: 20px 0
+
+  &__data
+    max-width: 450px
+    margin: 0 auto
+    +r($md)
+      max-width: 350px
+    +r($sm)
+      max-width: 500px
+
+
+  &__title
+    +ms300
+    font-size: 26px
+    color: #9056a3
+    margin-top: 10px
+    margin-bottom: 15px
+    +r($xs)
+      font-size: 24px
+      margin-bottom: 5px
+
+  p
+    a
+      +ms700
+      color: #000
+      &:hover
+        color: #ff024f
+

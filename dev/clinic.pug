@@ -1,0 +1,37 @@
+extends _base
+
+block vars
+  -
+    var pageId = "clinic",
+        pageClass = "_inner"
+
+block content
+  +b.hero-inner
+    .container
+      h1 Клиники Израиля
+
+  +sort("Найдено 10 клиник <span class='hidden-xs'>по специализации</span>")
+
+  .container.container_clinic
+    +b.clinic
+      -for(var i = 0; i < 4; i++)
+        +b.clinic-item
+          +e.head
+            +e.H3.title Клиника Ассута
+            +e.addres Израиль, г. Тель-Авив
+          +e.body
+            +e.preview(style="background-image: url(img/clinic.jpg);")
+            +e.desc
+              p Одна из лучших израильских клиник, осуществляющих лечение по различным специализациям. В настоящее время в ней работает более 1500 врачей-профессионалов.
+              +e.P.subtitle
+                b Специализация:
+              p Онкология, Радиология, Хирургия, Трансплантология, Ортопедия, Офтальмология
+
+              +b.BUTTON.btn._info(type="button") Отправить запрос в клинику
+              +e.phone
+                a(href="tel:88003002555") 8 (800) 300-25-55
+                br
+                | Консультация на русском языке
+      .btn-wrap
+        +b.A.btn._default.__btn(href="#") Посмотреть все 32 клиники
+

@@ -1,0 +1,34 @@
+extends _base
+
+block vars
+  -
+    var pageId = "doctor",
+        pageClass = "_inner"
+
+block content
+  +b.hero-inner
+    .container
+      h1 Врачи ведущих клиник Израиля
+
+  +sort("Найдено 15 врачей <span class='hidden-xs'>по специализации</span>")
+
+  .container
+    +b.doctor
+      -for(var i = 0; i < 6; i++)
+        +b.doctor-item
+          +e.IMG.photo(src="img/doctor.jpg")
+          +e.data
+            +e.H3.name Евгений Липсон
+            +e.type Онколог, лучевой терапевт
+            p Признанный эксперт в области диагностики онкологических заболевани; профессор и доктор медицинских наук
+            +e.job Место работы: 
+              a(href="#") Клиника Ассута
+            +b.BUTTON.btn._info(type="button") Проконсультироваться
+      +b.A.btn._default.__btn(href="#") Посмотреть всех врачей
+
+
+
+
+
+
+

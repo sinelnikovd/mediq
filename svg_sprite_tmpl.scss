@@ -1,0 +1,33 @@
+.<%=common %> {
+
+    &:before {
+      content: '';
+			display: inline-block;
+			vertical-align: middle;
+      background-image: url("<%=svgPath%>");
+      background-repeat: no-repeat;
+      background-size: <%= swidth %>px <%= sheight %>px;
+
+      .no-svg & {
+        background-image: url("<%=pngPath%>");
+      }
+    }
+}
+
+
+<% _.forEach(svg, function(svgItem) { %>
+
+.<%=common %>_<%=svgItem.name%> {
+	width: <%= svgItem.width %>px;
+	height: <%= svgItem.height %>px;
+  &:before {
+      background-position: <%= svgItem.positionX %>px <%= svgItem.positionY %>px;
+      width: <%= svgItem.width %>px;
+      height: <%= svgItem.height %>px;
+    }
+  }
+
+  @mixin <%=common %>-<%=svgItem.name%>(){
+    @extend .<%=common %>_<%=svgItem.name%>;
+  }
+<% }); %>

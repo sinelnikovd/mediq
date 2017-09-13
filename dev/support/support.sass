@@ -1,0 +1,67 @@
+.support
+  +container
+  align-items: stretch
+  padding: 35px+81px 0 35px
+  +r($md)
+    padding: 35px+79px 0 35px
+  +r($xs)
+    padding: 20px+65px 0 20px
+
+  &__panel
+    margin: 15px 0
+    padding: 35px 40px
+    +col(6)
+    +box
+    +r($sm)
+      margin: 10px 0
+      +col(12)
+    +r($xs)
+      padding: 20px
+
+  &__title
+    +ms700
+    font-size: 28px
+    line-height: 32/28
+    margin-bottom: 20px
+    +r($sm)
+      font-size: 24px
+      margin-bottom: 10px
+      line-height: 28/24
+    a
+      color: #000
+
+  p
+    margin: 20px 0
+    font-size: 14px
+    line-height: 20/14
+    a
+      +ms300
+      color: #2c8db1
+      text-decoration: underline
+      &:hover
+        text-decoration: none
+
+  &__label
+    font-size: 14px
+    font-style: italic
+    color: #7e7e7e
+    margin-top: 5px
+    +r($xs)
+      max-width: 150px
+      margin: 5px auto 0
+      text-align: center
+
+  .btn
+    +ms700
+    background-color: #3d849b
+    border-color: #3d849b
+    width: 100%
+    max-width: 220px
+    height: 39px
+    +r($xs)
+      margin: 0 auto
+      display: block
+    &:hover
+      background-color: #6aaab4
+      border-color: #6aaab4
+      color: #fff
